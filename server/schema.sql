@@ -3,7 +3,6 @@ CREATE DATABASE chat;
 
 USE chat;
 
-
 CREATE TABLE users (
   /* Describe your table here.*/
   id int(11) NOT NULL AUTO_INCREMENT,
@@ -24,11 +23,11 @@ CREATE TABLE rooms (
   /* Describe your table here.*/
   id int(11) NOT NULL AUTO_INCREMENT,
   room_name VARCHAR(50),
-  message_id int,
-  user_id int,
-  PRIMARY KEY (id),
-  FOREIGN KEY (message_id) REFERENCES messages (id),
-  FOREIGN KEY (user_id) REFERENCES users (id)
+  -- message_id int,
+  -- user_id int,
+  PRIMARY KEY (id)
+  -- FOREIGN KEY (message_id) REFERENCES messages (id),
+  -- FOREIGN KEY (user_id) REFERENCES users (id)
 );
 
 CREATE TABLE friends (
